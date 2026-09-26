@@ -5,7 +5,12 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { attendance, guests } = body;
 
-    const scriptUrl = process.env.GOOGLE_SCRIPT_URL || process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL;
+    const DEFAULT_SCRIPT_URL =
+      "https://script.google.com/macros/s/AKfycbxUi6dhWm-5DqxGeUe2iCAzUQB4UNWFoDCAbXpkoeEN219C3WE1B3V14wpQ38_OU1E8/exec";
+    const scriptUrl =
+      process.env.GOOGLE_SCRIPT_URL ||
+      process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL ||
+      DEFAULT_SCRIPT_URL;
 
     if (scriptUrl) {
       const response = await fetch(scriptUrl, {
@@ -14,10 +19,14 @@ export async function POST(request: Request) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ attendance, guests }),
+        redirect: "follow",
       });
 
+      const responseText = await response.text();
       if (!response.ok) {
-        console.error("Error pushing to Google Script:", await response.text());
+        console.error("Error pushing to Google Script:", responseText);
+      } else {
+        console.log("Successfully pushed to Google Script:", responseText);
       }
     } else {
       console.log("RSVP Received (No GOOGLE_SCRIPT_URL configured yet):", {
