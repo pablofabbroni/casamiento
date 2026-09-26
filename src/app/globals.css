@@ -1,26 +1,86 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-cream: #faf7f0;
+  --color-cream-dark: #efe8d8;
+  --color-sand: #e5dac8;
+  --color-beige: #ede8d0;
+  --color-caqui: #d5c58a;
+  --color-khaki: #d5c58a;
+  --color-brown: #745237;
+  --color-brown-dark: #5c4029;
+  --color-sage: #9daf87;
+  --color-sage-light: #dde6d0;
+  --color-forest: #17382b;
+  --color-forest-light: #24523f;
+  --color-forest-dark: #0f241c;
+  --color-gold: #c3a45b;
+  --color-gold-soft: #d8c494;
+  --color-ink: #21322a;
+
+  --font-serif: var(--font-jost);
+  --font-sans: var(--font-jost);
+  --font-script: var(--font-millerstone);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.font-script {
+  font-family: var(--font-millerstone), cursive, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background-color: var(--color-sage-light);
+  color: var(--color-forest-dark);
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-slow {
+  display: flex;
+  width: max-content;
+  animation: marquee 65s linear infinite;
+}
+
+.animate-marquee-slow:hover {
+  animation-play-state: paused;
 }
