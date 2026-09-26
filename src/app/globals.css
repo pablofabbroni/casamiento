@@ -38,8 +38,8 @@ body {
 }
 
 ::selection {
-  background-color: var(--color-sage-light);
-  color: var(--color-forest-dark);
+  background-color: var(--color-sand);
+  color: var(--color-brown-dark);
 }
 
 @keyframes rise-in {

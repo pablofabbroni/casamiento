@@ -47,7 +47,7 @@ export default function Gifts() {
   return (
     <section id="regalos" className="scroll-mt-24 bg-cream py-24">
       <div className="mx-auto max-w-5xl px-6 text-center">
-        <p className="text-xs uppercase tracking-[0.35em] text-sage">
+        <p className="text-xs uppercase tracking-[0.35em] text-[#6b5d3b] font-medium">
           Mesa de regalos
         </p>
         <h2 className="mt-4 font-serif text-3xl sm:text-4xl font-light tracking-wide text-[#3e2f23]">
@@ -65,13 +65,13 @@ export default function Gifts() {
             const isCopied = copiedCbu === acc.cbu;
             return (
               <Reveal key={acc.cbu} delay={index * 120}>
-                <div className="flex h-full flex-col justify-between rounded-2xl border border-sage-light bg-cream-dark/50 p-7 shadow-sm transition-all hover:shadow-md hover:border-gold/50">
+                <div className="flex h-full flex-col justify-between rounded-2xl border border-[#dcd4b8] bg-[#faf7f2] p-7 shadow-sm transition-all hover:shadow-md hover:border-[#745237]/40">
                   <div className="space-y-4">
-                    <div className="flex items-center justify-between border-b border-sage/20 pb-3">
-                      <span className="text-xs uppercase tracking-[0.25em] text-sage font-medium">
+                    <div className="flex items-center justify-between border-b border-[#dcd4b8] pb-3">
+                      <span className="text-xs uppercase tracking-[0.25em] text-[#6b5d3b] font-medium">
                         Cuenta de {acc.person}
                       </span>
-                      <span className="text-xs text-forest/70 font-medium bg-sage-light/60 px-2.5 py-1 rounded-full">
+                      <span className="text-xs text-[#745237] font-medium bg-[#ede8d0] px-2.5 py-1 rounded-full border border-[#dcd4b8]">
                         {acc.bank}
                       </span>
                     </div>
@@ -80,7 +80,7 @@ export default function Gifts() {
                       <p className="text-xs uppercase tracking-[0.15em] text-ink/60">
                         Titular
                       </p>
-                      <p className="mt-1 text-base font-medium text-forest">
+                      <p className="mt-1 text-base font-medium text-[#3e2f23]">
                         {acc.name}
                       </p>
                     </div>
@@ -89,7 +89,7 @@ export default function Gifts() {
                       <p className="text-xs uppercase tracking-[0.15em] text-ink/60">
                         CBU
                       </p>
-                      <p className="mt-1 font-mono text-sm tracking-wide text-forest break-all bg-cream/70 p-2.5 rounded-xl border border-sage-light select-all">
+                      <p className="mt-1 font-mono text-sm tracking-wide text-[#3e2f23] break-all bg-[#ede8d0]/40 p-2.5 rounded-xl border border-[#dcd4b8] select-all">
                         {acc.cbu}
                       </p>
                     </div>

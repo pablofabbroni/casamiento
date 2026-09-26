@@ -32,7 +32,7 @@ export default function Ceremony() {
     <section id="ceremonia" className="scroll-mt-24 bg-cream py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="text-center">
-          <p className="text-xs uppercase tracking-[0.35em] text-sage">Agendá</p>
+          <p className="text-xs uppercase tracking-[0.35em] text-[#6b5d3b] font-medium">Agendá</p>
           <h2 className="mt-4 font-serif text-3xl sm:text-4xl font-light tracking-wide text-[#3e2f23]">
             ¿Cuándo y dónde?
           </h2>
@@ -43,11 +43,11 @@ export default function Ceremony() {
           {events.map((e) => (
             <article
               key={e.id}
-              className="flex flex-col overflow-hidden rounded-2xl border border-sage-light bg-cream-dark/50 shadow-sm transition-shadow hover:shadow-xl hover:shadow-sage/20"
+              className="flex flex-col overflow-hidden rounded-2xl border border-[#dcd4b8] bg-[#faf7f2] shadow-sm transition-shadow hover:shadow-xl hover:shadow-[#745237]/10"
             >
               <div className="flex items-start justify-between gap-4 p-8 pb-6">
                 <div>
-                  <p className="text-xs uppercase tracking-[0.3em] text-sage">
+                  <p className="text-xs uppercase tracking-[0.3em] text-[#6b5d3b] font-medium">
                     {e.title}
                   </p>
                   <h3 className="mt-3 font-serif text-2xl font-normal text-[#3e2f23]">

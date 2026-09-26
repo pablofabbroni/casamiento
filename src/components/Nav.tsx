@@ -25,7 +25,7 @@ export default function Nav() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-forest-dark/90 backdrop-blur-md shadow-lg shadow-forest-dark/20"
+          ? "bg-[#241a13]/90 backdrop-blur-md shadow-lg shadow-[#241a13]/30"
           : "bg-transparent"
       }`}
     >
@@ -64,7 +64,7 @@ export default function Nav() {
       </nav>
 
       {open && (
-        <ul className="flex flex-col items-center gap-5 bg-forest-dark/95 py-6 backdrop-blur-md md:hidden">
+        <ul className="flex flex-col items-center gap-5 bg-[#241a13]/95 py-6 backdrop-blur-md md:hidden">
           {links.map((l) => (
             <li key={l.href}>
               <Link

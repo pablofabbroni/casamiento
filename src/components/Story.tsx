@@ -23,17 +23,17 @@ export default function Story() {
     <section id="historia" className="scroll-mt-24 bg-cream py-24">
       <div className="mx-auto max-w-4xl px-6">
         <div className="text-center">
-          <p className="text-xs uppercase tracking-[0.35em] text-sage">
+          <p className="text-xs uppercase tracking-[0.35em] text-[#6b5d3b] font-medium">
             Nuestra historia
           </p>
-          <h2 className="mt-4 font-serif text-3xl sm:text-4xl font-light tracking-wide text-forest">
+          <h2 className="mt-4 font-serif text-3xl sm:text-4xl font-light tracking-wide text-[#3e2f23]">
             Seis años de nosotros
           </h2>
-          <div className="mx-auto mt-6 h-px w-24 bg-gold" />
+          <div className="mx-auto mt-6 h-px w-24 bg-[#745237]" />
         </div>
 
         <div className="relative mt-20">
-          <div className="absolute inset-y-0 left-1/2 hidden w-px -translate-x-1/2 bg-sage/50 md:block" />
+          <div className="absolute inset-y-0 left-1/2 hidden w-px -translate-x-1/2 bg-[#745237]/20 md:block" />
           <div className="space-y-16">
             {milestones.map((m, i) => (
               <Reveal key={m.year} delay={i * 120}>
@@ -47,10 +47,10 @@ export default function Story() {
                     <p className="font-serif text-4xl sm:text-5xl font-light text-gold">{m.year}</p>
                   </div>
                   <div className="w-full md:w-1/2">
-                    <h3 className="font-serif text-2xl font-normal text-forest">
+                    <h3 className="font-serif text-2xl font-normal text-[#3e2f23]">
                       {m.title}
                     </h3>
-                    <p className="mt-3 leading-relaxed text-ink/80">{m.text}</p>
+                    <p className="mt-3 leading-relaxed text-[#544635]">{m.text}</p>
                   </div>
                 </div>
               </Reveal>

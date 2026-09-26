@@ -179,7 +179,7 @@ export default function RSVP() {
                     return (
                       <li key={g.id} className="rounded-xl bg-[#faf7f2] px-4 py-3 border border-[#dcd4b8] space-y-1">
                         <div className="flex items-center justify-between">
-                          <span className="font-medium text-forest">
+                          <span className="font-medium text-[#3e2f23]">
                             {idx + 1}. {g.lastName}, {g.firstName}
                           </span>
                           <span className="text-xs uppercase tracking-wider text-[#635340] bg-white px-3 py-1 rounded-full flex items-center gap-1.5 border border-[#dcd4b8]">

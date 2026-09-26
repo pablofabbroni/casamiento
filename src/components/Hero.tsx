@@ -20,7 +20,7 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 px-6 text-center text-cream">
-        <p className="text-xs uppercase tracking-[0.5em] text-sage-light md:text-sm">
+        <p className="text-xs uppercase tracking-[0.5em] text-gold-soft font-light md:text-sm drop-shadow-sm">
           Nuestra boda
         </p>
         <h1 className="mt-6 font-script text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-normal text-cream drop-shadow-md flex items-center justify-center flex-wrap gap-x-3 sm:gap-x-4">
