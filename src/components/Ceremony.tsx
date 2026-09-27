@@ -7,11 +7,10 @@ const events = [
     icon: "church",
     date: "Sábado 13 de febrero de 2027",
     time: "18:30 hs",
+    place: "Parroquia Nuestra Señora de La Merced",
     address: "Vicente López y Planes 501",
     city: "Río Cuarto, Córdoba",
     maps: "https://maps.app.goo.gl/2NMLXctSqEXCQjrA6",
-    embed:
-      "https://maps.google.com/maps?q=-33.134022,-64.334520&hl=es&z=16&output=embed",
   },
   {
     id: "civil",
@@ -19,11 +18,10 @@ const events = [
     icon: "rings",
     date: "Sábado 13 de febrero de 2027",
     time: "20:00 hs",
+    place: "Espacio Muñiz",
     address: "Francisco Muñiz 2900",
     city: "Río Cuarto, Córdoba",
     maps: "https://maps.app.goo.gl/oKJBH8jU3Hjhuzrr9",
-    embed:
-      "https://maps.google.com/maps?q=-33.093895,-64.307943&hl=es&z=16&output=embed",
   },
 ];
 
@@ -45,7 +43,7 @@ export default function Ceremony() {
               key={e.id}
               className="flex flex-col overflow-hidden rounded-2xl border border-[#dcd4b8] bg-[#faf7f2] shadow-sm transition-shadow hover:shadow-xl hover:shadow-[#745237]/10"
             >
-              <div className="flex items-start justify-between gap-4 p-8 pb-6">
+              <div className="flex items-start justify-between gap-4 p-8 pb-4">
                 <div>
                   <p className="text-xs uppercase tracking-[0.3em] text-[#6b5d3b] font-medium">
                     {e.title}
@@ -86,9 +84,12 @@ export default function Ceremony() {
                 </div>
               </div>
 
-              <div className="px-8 pb-6 text-sm leading-relaxed text-ink/80">
-                <p>{e.address}</p>
-                <p>{e.city}</p>
+              <div className="px-8 pb-6 text-sm leading-relaxed">
+                <p className="font-serif text-xl sm:text-2xl font-normal text-[#3e2f23]">
+                  {e.place}
+                </p>
+                <p className="mt-1 text-ink/75">{e.address}</p>
+                <p className="text-ink/75">{e.city}</p>
               </div>
 
               <div className="px-8 pb-8">
@@ -105,15 +106,6 @@ export default function Ceremony() {
                   Cómo llegar
                 </Link>
               </div>
-
-              <iframe
-                src={e.embed}
-                title={`Mapa de ${e.title}`}
-                loading="lazy"
-                allowFullScreen
-                referrerPolicy="no-referrer-when-downgrade"
-                className="h-56 w-full border-0"
-              />
             </article>
           ))}
         </div>

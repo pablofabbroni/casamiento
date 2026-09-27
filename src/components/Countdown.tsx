@@ -62,6 +62,10 @@ export default function Countdown() {
           ))}
         </div>
 
+        <p className="mt-10 text-xs uppercase tracking-[0.35em] text-[#6b5d3b] font-medium">
+          Para el día más especial
+        </p>
+
         {/* Línea divisoria decorativa con la siguiente sección */}
         <div className="mt-20 flex items-center justify-center gap-6">
           <span className="h-px max-w-sm flex-1 bg-gradient-to-r from-transparent via-[#745237]/30 to-[#745237]/70" />

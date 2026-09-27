@@ -11,8 +11,9 @@ export default function Footer() {
           13 de febrero de 2027
         </p>
         <div className="mx-auto mt-6 h-px w-16 bg-[#745237]/60" />
-        <p className="mt-6 text-sm text-[#544635]">
-          Hecho con amor para nuestros invitados · Los esperamos 🤍
+        <p className="mt-6 text-sm text-[#544635] leading-relaxed">
+          <span className="block">Hecho con amor para nuestros invitados</span>
+          <span className="block mt-1">Los esperamos 🤍</span>
         </p>
       </div>
     </footer>

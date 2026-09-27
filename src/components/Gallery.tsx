@@ -3,25 +3,24 @@
 import Image from "next/image";
 import { useEffect, useState, useCallback } from "react";
 
-// Las fotos de campo seleccionadas (excluyendo la 159.jpg de la portada)
+// Las fotos optimizadas de la carpeta mejoradas (excluyendo la 159.jpg de la portada)
 const fotos = [
-  { src: "/fotos/campo/IMG_3010.jpg", alt: "Paula y Pablo en el campo 1" },
-  { src: "/fotos/campo/147.jpg", alt: "Paula y Pablo en el campo 2" },
-  { src: "/fotos/campo/DSC_0344.jpg", alt: "Paula y Pablo en el campo 3" },
-  { src: "/fotos/campo/IMG_3198.jpg", alt: "Paula y Pablo en el campo 4" },
-  { src: "/fotos/campo/170.opcion2.JPG", alt: "Paula y Pablo en el campo 5" },
-  { src: "/fotos/campo/DSC_0345.jpg", alt: "Paula y Pablo en el campo 6" },
-  { src: "/fotos/campo/206.jpg", alt: "Paula y Pablo en el campo 7" },
-  { src: "/fotos/campo/DSC_0278.jpg", alt: "Paula y Pablo en el campo 8" },
-  { src: "/fotos/campo/IMG_3219.JPG", alt: "Paula y Pablo en el campo 9" },
-  { src: "/fotos/campo/DSC_0347.jpg", alt: "Paula y Pablo en el campo 10" },
-  { src: "/fotos/campo/281.jpg", alt: "Paula y Pablo en el campo 11" },
-  { src: "/fotos/campo/DSC_0349.jpg", alt: "Paula y Pablo en el campo 12" },
-  { src: "/fotos/campo/DSC_0160.png", alt: "Paula y Pablo en el campo 13" },
-  { src: "/fotos/campo/DSC_0351.jpg", alt: "Paula y Pablo en el campo 14" },
-  { src: "/fotos/campo/IMG_3221.JPG", alt: "Paula y Pablo en el campo 15" },
-  { src: "/fotos/campo/DSC_0353.jpg", alt: "Paula y Pablo en el campo 16" },
-  { src: "/fotos/campo/DSC_0287.png", alt: "Paula y Pablo en el campo 17" },
+  { src: "/fotos/mejoradas/IMG_3010.jpg", alt: "Paula y Pablo en el campo 1" },
+  { src: "/fotos/mejoradas/147.jpg", alt: "Paula y Pablo en el campo 2" },
+  { src: "/fotos/mejoradas/DSC_0344.jpg", alt: "Paula y Pablo en el campo 3" },
+  { src: "/fotos/mejoradas/IMG_3198.jpg", alt: "Paula y Pablo en el campo 4" },
+  { src: "/fotos/mejoradas/170.opcion2.JPG", alt: "Paula y Pablo en el campo 5" },
+  { src: "/fotos/mejoradas/206.jpg", alt: "Paula y Pablo en el campo 6" },
+  { src: "/fotos/mejoradas/DSC_0278.jpg", alt: "Paula y Pablo en el campo 7" },
+  { src: "/fotos/mejoradas/IMG_3219.JPG", alt: "Paula y Pablo en el campo 8" },
+  { src: "/fotos/mejoradas/DSC_0347.jpg", alt: "Paula y Pablo en el campo 9" },
+  { src: "/fotos/mejoradas/281.jpg", alt: "Paula y Pablo en el campo 10" },
+  { src: "/fotos/mejoradas/DSC_0349.jpg", alt: "Paula y Pablo en el campo 11" },
+  { src: "/fotos/mejoradas/DSC_0160.jpg", alt: "Paula y Pablo en el campo 12" },
+  { src: "/fotos/mejoradas/DSC_0351.jpg", alt: "Paula y Pablo en el campo 13" },
+  { src: "/fotos/mejoradas/IMG_3221.JPG", alt: "Paula y Pablo en el campo 14" },
+  { src: "/fotos/mejoradas/DSC_0353.jpg", alt: "Paula y Pablo en el campo 15" },
+  { src: "/fotos/mejoradas/DSC_0287.jpg", alt: "Paula y Pablo en el campo 16" },
 ];
 
 // Duplicamos las fotos para lograr el bucle infinito continuo

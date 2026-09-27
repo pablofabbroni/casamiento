@@ -21,6 +21,14 @@ export const metadata: Metadata = {
   description:
     "Paula y Pablo te invitamos a celebrar nuestro casamiento. 13 de febrero de 2027, Río Cuarto.",
   keywords: ["boda", "casamiento", "Paula", "Pablo", "invitación", "Río Cuarto"],
+  icons: {
+    icon: [
+      { url: "/favicon.svg?v=anillos", type: "image/svg+xml" },
+      { url: "/favicon-32x32.png?v=anillos", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico?v=anillos", sizes: "any" },
+    ],
+    apple: "/apple-touch-icon.png?v=anillos",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -29,6 +37,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="es"
       className={`${jost.variable} ${millerstone.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=anillos" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=anillos" />
+        <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png?v=anillos" />
+        <link rel="shortcut icon" href="/favicon.ico?v=anillos" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=anillos" />
+      </head>
       <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>
   );

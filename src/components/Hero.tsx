@@ -37,11 +37,12 @@ export default function Hero() {
           </span>
           <span className="h-px w-16 bg-cream/40" />
         </div>
-        <p className="mx-auto mt-8 max-w-xl font-sans text-base sm:text-lg font-light leading-relaxed text-cream/90 drop-shadow-sm">
-          La vida está hecha de momentos, y algunos merecen ser celebrados de forma especial.
-          <br />
-          <span className="mt-3 inline-block font-normal text-cream">
-            Será una alegría inmensa compartir este gran día con ustedes.
+        <p className="mx-auto mt-8 max-w-xl font-sans text-[13.5px] sm:text-base md:text-lg font-light leading-relaxed text-cream/90 drop-shadow-sm">
+          <span className="block">La vida está hecha de momentos, y algunos merecen</span>
+          <span className="block">ser celebrados de forma especial.</span>
+          <span className="mt-3 block font-normal text-cream">
+            <span className="block">Será una alegría inmensa compartir</span>
+            <span className="block">este gran día con ustedes.</span>
           </span>
         </p>
         <a
