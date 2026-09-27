@@ -1,9 +1,9 @@
 import Hero from "@/components/Hero";
-import Ceremony from "@/components/Ceremony";
 import Countdown from "@/components/Countdown";
+import Ceremony from "@/components/Ceremony";
 import RSVP from "@/components/RSVP";
-import Gifts from "@/components/Gifts";
 import Gallery from "@/components/Gallery";
+import Gifts from "@/components/Gifts";
 import Footer from "@/components/Footer";
 import Music from "@/components/Music";
 
@@ -12,11 +12,11 @@ export default function Home() {
     <>
       <main className="flex-1">
         <Hero />
-        <Ceremony />
         <Countdown />
+        <Ceremony />
         <RSVP />
-        <Gifts />
         <Gallery />
+        <Gifts />
       </main>
       <Footer />
       <Music />

@@ -46,7 +46,7 @@ export default function Hero() {
           </span>
         </p>
         <a
-          href="#ceremonia"
+          href="#cuenta-regresiva"
           className="mt-20 sm:mt-24 inline-flex items-center rounded-full border border-cream/50 bg-black/20 backdrop-blur-sm px-10 py-4 text-sm uppercase tracking-[0.3em] text-cream transition-all hover:border-gold-soft hover:bg-black/30 hover:text-gold-soft shadow-lg"
         >
           Ver la invitación

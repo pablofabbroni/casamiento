@@ -146,7 +146,7 @@ export default function RSVP() {
   };
 
   return (
-    <section id="confirmar" className="scroll-mt-24 bg-[#ede8d0] pt-6 pb-24 text-ink">
+    <section id="confirmar" className="scroll-mt-24 bg-[#ede8d0] py-24 text-ink">
       <div className="mx-auto max-w-2xl px-6">
         <div className="text-center">
           <p className="text-xs uppercase tracking-[0.35em] text-[#6b5d3b] font-medium">

@@ -19,8 +19,7 @@ const accounts: Account[] = [
     bank: "Banco Ciudad",
     cbu: "0290107310000559149389",
     phoneDisplay: "+54 9 358 484-5466",
-    whatsappUrl:
-      "https://wa.me/5493584845466?text=%C2%A1Hola%20Pablo!%20Te%20escribo%20por%20el%20casamiento",
+    whatsappUrl: "https://wa.me/5493584845466",
   },
   {
     person: "Paula",
@@ -28,8 +27,7 @@ const accounts: Account[] = [
     bank: "Banco de la Provincia de Córdoba",
     cbu: "0200302111000019304326",
     phoneDisplay: "+54 9 358 548-2439",
-    whatsappUrl:
-      "https://wa.me/5493585482439?text=%C2%A1Hola%20Paula!%20Te%20escribo%20por%20el%20casamiento",
+    whatsappUrl: "https://wa.me/5493585482439",
   },
 ];
 

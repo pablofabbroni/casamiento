@@ -41,7 +41,7 @@ export default function Countdown() {
   ];
 
   return (
-    <section className="bg-[#ede8d0] pt-20 pb-8 text-ink">
+    <section id="cuenta-regresiva" className="scroll-mt-24 bg-[#ede8d0] py-20 sm:py-24 text-ink">
       <div className="mx-auto max-w-6xl px-6 text-center">
         <p className="text-xs uppercase tracking-[0.35em] text-[#6b5d3b] font-medium">
           Faltan
