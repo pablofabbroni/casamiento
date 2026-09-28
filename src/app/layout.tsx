@@ -16,11 +16,36 @@ const millerstone = localFont({
   display: "swap",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://casamiento-paula-pablo.vercel.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Paula & Pablo | Nuestra Boda",
   description:
     "Paula y Pablo te invitamos a celebrar nuestro casamiento. 13 de febrero de 2027, Río Cuarto.",
   keywords: ["boda", "casamiento", "Paula", "Pablo", "invitación", "Río Cuarto"],
+  openGraph: {
+    title: "Paula & Pablo | Nuestra Boda",
+    description: "13 de febrero de 2027 · Te esperamos para celebrar este gran día.",
+    url: siteUrl,
+    siteName: "Paula & Pablo | Nuestra Boda",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Paula & Pablo - Nuestra Boda",
+      },
+    ],
+    locale: "es_AR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Paula & Pablo | Nuestra Boda",
+    description: "13 de febrero de 2027 · Te esperamos para celebrar este gran día.",
+    images: ["/og-image.jpg"],
+  },
   icons: {
     icon: [
       { url: "/favicon.svg?v=anillos", type: "image/svg+xml" },
