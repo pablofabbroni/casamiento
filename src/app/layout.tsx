@@ -16,7 +16,7 @@ const millerstone = localFont({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://casamiento-paula-pablo.vercel.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://bodapauypablo.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -31,9 +31,11 @@ export const metadata: Metadata = {
     siteName: "Paula & Pablo | Nuestra Boda",
     images: [
       {
-        url: "/og-image.jpg",
+        url: `${siteUrl}/og-image.jpg`,
+        secureUrl: `${siteUrl}/og-image.jpg`,
         width: 1200,
         height: 630,
+        type: "image/jpeg",
         alt: "Paula & Pablo - Nuestra Boda",
       },
     ],
@@ -44,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Paula & Pablo | Nuestra Boda",
     description: "13 de febrero de 2027 · Te esperamos para celebrar este gran día.",
-    images: ["/og-image.jpg"],
+    images: [`${siteUrl}/og-image.jpg`],
   },
   icons: {
     icon: [
@@ -63,6 +65,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${jost.variable} ${millerstone.variable} h-full antialiased`}
     >
       <head>
+        <meta property="og:image" content={`${siteUrl}/og-image.jpg`} />
+        <meta property="og:image:secure_url" content={`${siteUrl}/og-image.jpg`} />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=anillos" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=anillos" />
         <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png?v=anillos" />
