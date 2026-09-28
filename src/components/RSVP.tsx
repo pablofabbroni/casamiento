@@ -159,6 +159,18 @@ export default function RSVP() {
           <p className="mt-8 leading-relaxed text-[#544635]">
             Nada nos haría más felices que celebrar este día juntos. Tu confirmación es muy importante para ayudarnos a organizar cada detalle.
           </p>
+
+          <div className="mt-6 inline-flex items-center gap-2.5 rounded-full bg-white/85 border border-[#dcd4b8] px-5 py-2.5 text-xs sm:text-sm text-[#745237] shadow-xs">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-gold">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+              <line x1="16" y1="2" x2="16" y2="6" />
+              <line x1="8" y1="2" x2="8" y2="6" />
+              <line x1="3" y1="10" x2="21" y2="10" />
+            </svg>
+            <span>
+              Fecha límite de confirmación: <strong className="font-semibold text-[#3e2f23]">31/01/2027</strong>
+            </span>
+          </div>
         </div>
 
         {sent ? (
